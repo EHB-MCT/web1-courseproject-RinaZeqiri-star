@@ -1,55 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Cormorant:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&family=EB+Garamond&family=IM+Fell+English&display=swap");
 
+/* hier verander ik de marge*/
 body {
-	background: rgb(177, 130, 181);
-	background: linear-gradient(90deg, rgba(177, 130, 181, 1) 0%, rgba(218, 160, 161, 1) 45%, rgba(136, 197, 208, 1) 100%);
+	background: #f4dcd5;
+	margin-left: 12%;
+	margin-right: 12%;
 }
+
 .header {
+	font-family: "IM Fell English", sans-serif;
+	background: white;
+	margin-top: -1%;
 	width: 100%;
 	height: 100px;
 	display: flex;
 	justify-content: right;
 	align-items: center;
-	border-bottom: 5px solid white;
 }
 
-.navigation {
-	border: 20px;
-	padding: 10px;
+svg {
+	height: 890px;
 }
 
-.navigation ul {
-	border: 20px;
-	margin: 0;
-	padding: 4;
+.lineart {
+	position: relative;
+}
+
+/* line are rechts boven*/
+.top {
+	position: absolute;
+	top: 0%;
+	left: 100%;
+}
+
+/* line are rechts boven*/
+.bottom {
+	position: absolute;
+	top: 100;
+	bottom: 0;
+	left: 100%;
+}
+
+/* line are rechts boven*/
+.left {
+	left: -15%;
+}
+
+.right {
+	right: 0;
+	top: -100;
+	bottom: 0;
+	left: 100%;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .navigation ul li {
-	background-color: #91c5d2;
-	padding: 20px 40px;
-	border-radius: 50%;
+	padding: 10px 30px;
 	display: inline-block;
-	margin-right: 20px;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .navigation ul li a {
-	border: 50px;
 	text-decoration: none;
-	color: white;
+	color: burlywood;
+	background-color: none;
+	padding: 10px 20px;
+	border-radius: 50%;
 }
 
+/*hier is de ding, the line dat kmot wanner je op de home, album drukt*/
+.navigation ul li a:hover,
+.navigation ul li a.active {
+	border-bottom: 5px solid burlywood;
+}
+
+/* mijn foto cowboy*/
 img {
-	width: 450px;
+	width: 400px;
 	height: 500px;
-	border-radius: 50%;
 	left: 10px;
-	top: 30%;
-	margin-left: 100px;
+	top: 60%;
+	margin-left: 50px;
 }
 
 .wrapper {
 	display: flex;
+	flex-wrap: wrap-reverse;
 	align-items: center;
 	margin-top: 100px;
 	margin-bottom: 100px;
@@ -65,11 +107,12 @@ img {
 	flex: 1;
 }
 
+/*text naast foto van cowboy*/
 .wrapper-text h2 {
 	font-size: 70px;
 	color: #d39fa1;
 	font-weight: normal;
-	color: white;
+	color: #aaaaaa;
 	text-align: right;
 }
 
@@ -77,6 +120,287 @@ img {
 	font-size: 20px;
 	color: #d39fa1;
 	font-weight: normal;
-	color: white;
+	color: burlywood;
 	text-align: right;
+}
+
+/* 2de pagina album*/
+.slide-image img {
+	border-radius: 0px;
+	font-family: "Baskervville";
+}
+
+.pagina-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* de 4 fotos*/
+.image-with-text {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin-bottom: 5%;
+}
+
+/* de breede van de 4 fotos*/
+.image-with-text img {
+	width: 50%;
+	max-width: 400px;
+}
+
+/* de tekst naast de fotos*/
+.image-with-text p {
+	font-family: "Baskervville";
+	color: #c1a589;
+	font-size: 25px;
+	margin-top: 170px;
+	margin-left: 90px;
+	align-items: center;
+}
+
+.pagina-text {
+	flex: 1;
+	padding-left: 50px;
+	padding-bottom: 50px;
+}
+
+.image-with-text:nth-child(odd) {
+	flex-direction: row-reverse;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.image-with-text:nth-child(even) {
+	flex-direction: row;
+	margin-right: auto;
+	margin-left: 0;
+}
+
+body {
+	margin-left: 12%;
+	margin-right: 12%;
+	background: #f4dcd5;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Section Styles */
+
+.section1 {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin-top: 30px;
+	font-family: "Baskervville";
+	color: #c1a589;
+	font-size: 15px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+.section2 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 30px;
+	font-family: "Baskervville";
+	color: #c1a589;
+	font-size: 15px;
+}
+
+.section3 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 30px;
+	font-family: "Baskervville";
+	color: #c1a589;
+	font-size: 15px;
+}
+
+.foto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.contacteer {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.contactflex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 10px;
+	color: #c1a589;
+}
+
+h1 {
+	color: #c1a589;
+}
+
+.hamburger-menu {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.bar {
+	width: 25px;
+	height: 3px;
+	background-color: burlywood;
+	margin: 6px 0;
+}
+
+/* responsive homepage*/
+
+@media only screen and (max-width: 600px) {
+	body {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.hamburger-menu {
+		display: flex;
+	}
+
+	.navigation ul {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		position: absolute;
+		top: 60px; /* Adjust as needed */
+		left: 0;
+		background: white;
+	}
+
+	.navigation ul.show {
+		display: flex;
+	}
+
+	.navigation ul li {
+		padding: 10px 0;
+	}
+
+	.navigation ul li a {
+		padding: 10px 20px;
+	}
+	.wrapper {
+		flex-direction: column; /* Stack items vertically on smaller screens */
+		align-items: center; /* Center items in the flex container */
+	}
+
+	.wrapper-text {
+		padding-left: 0; /* Remove left padding on smaller screens */
+		text-align: center; /* Center text on smaller screens */
+	}
+
+	.wrapper-image {
+		order: -1; /* Move the image to the top on smaller screens */
+		margin-bottom: 20px; /* Add some spacing between image and text */
+	}
+
+	.wrapper-image img {
+		max-width: 60%; /* Make the image responsive */
+		max-height: 100%; /* Optional: Adjust the max height if needed */
+	}
+
+	svg {
+		height: auto;
+		width: 10%; /* Adjust the width for smaller screens */
+	}
+
+	.wrapper-image img {
+		width: 100%;
+	}
+
+	.image-with-text {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	/* de vier foots*/
+
+	.image-with-text img {
+		width: 10%;
+		max-width: 400px;
+		margin-bottom: 10px; /* Add some space between the image and text */
+	}
+
+	.image-with-text p {
+		margin-top: 0; /* Reset the top margin */
+		margin-left: 0;
+		font-size: 18px;
+	}
+
+	.pagina-image {
+		margin-bottom: 20px;
+	}
+
+	.image-with-text {
+		flex-direction: column;
+	}
+
+	.image-with-text img {
+		width: 40%;
+		max-width: 200px;
+	}
+
+	.image-with-text p {
+		text-align: left;
+		margin-top: 0;
+		margin-left: 10px;
+	}
+}
+
+/* responsive about me*/
+@media only screen and (max-width: 600px) {
+	.hamburger-menu {
+		display: flex;
+	}
+
+	.navigation ul {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.navigation ul.show {
+		display: flex;
+	}
+
+	.navigation ul li {
+		margin: 10px 0;
+	}
+
+	.section1,
+	.section2,
+	.section3 {
+		margin: 15px 0;
+		width: 80%;
+		font-size: 14px;
+		flex-direction: column;
+	}
+
+	.contactflex {
+		flex-direction: column;
+	}
 }
